@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/DavidLapous/multipers/releases/download/v{{ version }}/multipers-{{ version }}.tar.gz
-  sha256: d5beb966e6272d3894e3bf4dad3814f60863b5c0b08b415f8a56601da9237eaf
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3a14b831a319d1af41920180568997a9f39a51a04a591731563d082913e3be27
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
