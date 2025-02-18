@@ -19,9 +19,9 @@ requirements:
     - {{ compiler("c") }}
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
-    - python
-    - numpy >=2
-    - cython >=3  
+    - python  # [build_platform != target_platform]
+    - numpy >=2  # [build_platform != target_platform]
+    - cython >=3  # [build_platform != target_platform]
   host:
     - python
     - numpy >=2
@@ -30,7 +30,6 @@ requirements:
     - pip
     - tbb
     - tbb-devel
-    - libboost-python-devel
     - libboost-devel
   run:
     - python
