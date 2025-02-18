@@ -1,5 +1,5 @@
 {% set name = "multipers" %}
-{% set version = "2.2.3" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
