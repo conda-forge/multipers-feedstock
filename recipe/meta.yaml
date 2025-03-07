@@ -1,5 +1,5 @@
 {% set name = "multipers" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a14b831a319d1af41920180568997a9f39a51a04a591731563d082913e3be27
+  sha256: 87ae922052a194140d7ce4fc5dd95e7cb8046f4b33a5a154897a0d663bf99a66
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 5
+  number: 0
   skip: true  # [py<=39]
 
 requirements:
@@ -46,13 +46,13 @@ requirements:
 
 
 test:
-   imports:
-      - multipers
-   requires:
-      - pip
-   commands:
-      - pip install pykeops filtration-domination --upgrade
-      - pip check
+  imports:
+    - multipers
+  requires:
+    - pip
+  commands:
+    - pip install pykeops filtration-domination --upgrade
+    - pip check
 about:
   home: https://davidlapous.github.io/multipers/
   summary: Multiparameter Topological Persistence for Machine Learning
