@@ -2,7 +2,7 @@ build_platform:
   osx_arm64: osx_64
 azure:
   settings_linux:
-    swapfile_size: 10GiB
+    swapfile_size: 15GiB
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
