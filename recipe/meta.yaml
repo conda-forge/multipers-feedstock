@@ -1,5 +1,5 @@
 {% set name = "multipers" %}
-{% set version = "2.3.4" %}
+{% set version = "2.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0250d5b9714fa8ee83d6e82f73c5d34eb351509e57897f41bd8770107b0478f6
+  sha256: d700ea1f032576fa22e24c3b68524c982a2967c33f47f1a854d76c6ae2262002
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   skip: true  # [py<=39]
 
 requirements:
