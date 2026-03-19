@@ -11,8 +11,7 @@ source:
 
 build:
   export CMAKE_GENERATOR=Ninja
-  {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps \
-      --config-settings=cmake.args="${CMAKE_ARGS}"
+  {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps --config-settings=cmake.args="${CMAKE_ARGS}"
   number: 0
   skip: true  # [py<=39]
 
