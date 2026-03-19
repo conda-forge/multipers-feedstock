@@ -13,7 +13,9 @@ build:
   script: |
     export CMAKE_GENERATOR=Ninja  # [unix]
     export CMAKE_BUILD_PARALLEL_LEVEL="${CPU_COUNT}"  # [unix]
+    set "CONDA_PREFIX=%PREFIX%"  # [win]
     set "CMAKE_BUILD_PARALLEL_LEVEL=%CPU_COUNT%"  # [win]
+    set "CMAKE_ARGS=%CMAKE_ARGS% -DPython3_EXECUTABLE=%PYTHON% -DPython3_ROOT_DIR=%PREFIX% -DPython3_INCLUDE_DIR=%PREFIX%\include -DPython3_LIBRARY=%PREFIX%\libs\python%CONDA_PY%.lib"  # [win]
     {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
   number: 0
   skip: true  # [py<=39]
