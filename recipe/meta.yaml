@@ -10,7 +10,7 @@ source:
   sha256: 5a6c0e7f2825af24c3e743dd4aeea5afc859d70ea7f3705c80d6380cd5d9476d
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
+  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps --config-settings=cmake.args="${CMAKE_ARGS}" --config-settings=cmake.generator="Ninja"
   number: 0
   skip: true  # [py<=39]
 
