@@ -42,7 +42,7 @@ requirements:
   run:
     - python
     - tbb
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - gudhi >=3.8
     - tqdm
     - scipy
