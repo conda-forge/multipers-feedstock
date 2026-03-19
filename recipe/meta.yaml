@@ -11,9 +11,11 @@ source:
 
 build:
   script: |
-    export CMAKE_GENERATOR=Ninja
-    export CMAKE_BUILD_PARALLEL_LEVEL="$({{ PYTHON }} -c 'import os; print(os.cpu_count() or 1)')"
-    {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps --config-settings=cmake.args="${CMAKE_ARGS}"
+    export CMAKE_GENERATOR=Ninja  # [unix]
+    export CMAKE_BUILD_PARALLEL_LEVEL="${CPU_COUNT}"  # [unix]
+    set "CMAKE_GENERATOR=Ninja"  # [win]
+    set "CMAKE_BUILD_PARALLEL_LEVEL=%CPU_COUNT%"  # [win]
+    {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
   number: 0
   skip: true  # [py<=39]
 
