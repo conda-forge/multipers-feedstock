@@ -34,11 +34,19 @@ requirements:
     - numpy >=2
     - cython >=3
     - python-build
+    - scikit-build-core
     - wheel
     - pip
     - tbb
     - tbb-devel
     - libboost-devel
+    - cgal-cpp 
+    - gmp         # [not win]
+    - mpfr        # [not win]
+    - llvm-openmp                            # [osx]
+    - libgomp                                # [linux]
+    - intel-openmp                           # [win]
+    - eigen
   run:
     - python
     - tbb
@@ -50,6 +58,11 @@ requirements:
     - matplotlib-base
     - scikit-learn
     - pot
+    - libgmp      # [win]
+    - mpfr        # [win]
+    - llvm-openmp                            # [osx]
+    - libgomp                                # [linux]
+    - intel-openmp                           # [win]
 
 
 test:
