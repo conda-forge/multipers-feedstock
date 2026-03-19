@@ -45,8 +45,8 @@ requirements:
     - tbb-devel
     - libboost-devel
     - cgal-cpp 
-    - gmp         # [not win]
-    - mpfr        # [not win]
+    - gmp
+    - mpfr
     - llvm-openmp                            # [osx]
     - libgomp                                # [linux]
     - intel-openmp                           # [win]
