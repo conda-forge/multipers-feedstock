@@ -61,8 +61,6 @@ requirements:
     - matplotlib-base
     - scikit-learn
     - pot
-    - libgmp      # [win]
-    - mpfr        # [win]
     - llvm-openmp                            # [osx]
     - libgomp                                # [linux]
     - intel-openmp                           # [win]
