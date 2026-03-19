@@ -32,6 +32,7 @@ requirements:
     - scikit-build-core
     - ninja
     - cmake >=3.27
+    - eigen
   host:
     - python
     - numpy >=2
@@ -49,7 +50,6 @@ requirements:
     - llvm-openmp                            # [osx]
     - libgomp                                # [linux]
     - intel-openmp                           # [win]
-    - eigen
   run:
     - python
     - tbb
