@@ -1,5 +1,5 @@
 {% set name = "multipers" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5a6c0e7f2825af24c3e743dd4aeea5afc859d70ea7f3705c80d6380cd5d9476d
+  sha256: 565d4ea96236aa4a6bed905a7b0fcb8d8e5a5637926aa68d33b9e114116e5711
 
 build:
   script: |
@@ -46,7 +46,7 @@ requirements:
     - tbb
     - tbb-devel
     - libboost-devel
-    - cgal-cpp 
+    - cgal-cpp
     - gmp
     - mpfr
     - eigen
