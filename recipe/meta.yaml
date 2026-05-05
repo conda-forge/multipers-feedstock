@@ -19,6 +19,8 @@ build:
     {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
   number: 0
   skip: true  # [py<=39]
+  missing_dso_whitelist:
+    - $RPATH/multipers_core.dll              # [win]
 
 requirements:
   build:
