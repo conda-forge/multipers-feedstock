@@ -35,6 +35,8 @@ requirements:
     - scikit-build-core                      # [build_platform != target_platform]
     - ninja
     - cmake >=3.27
+    - patch                                  # [unix]
+    - m2-patch                               # [win]
   host:
     - python
     - numpy >=2
