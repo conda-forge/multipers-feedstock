@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/multipers-feeds
 
 Home: https://davidlapous.github.io/multipers/
 
-Package license: MIT
+Package license: GPL-3.0-or-later
 
 Summary: Multiparameter Topological Persistence for Machine Learning
 
