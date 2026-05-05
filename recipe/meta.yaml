@@ -57,7 +57,7 @@ requirements:
     - python
     - tbb
     - {{ pin_compatible('numpy') }}
-    - gudhi >=3.8
+    - gudhi >=3.10
     - tqdm
     - scipy
     - joblib
