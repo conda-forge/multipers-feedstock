@@ -13,8 +13,7 @@ build:
   script: |
     export CONDA_PREFIX="${PREFIX}"  # [unix]
     export CMAKE_GENERATOR=Ninja  # [unix]
-    export CMAKE_BUILD_PARALLEL_LEVEL="${CPU_COUNT}"  # [unix]
-    export CMAKE_BUILD_PARALLEL_LEVEL=2  # [linux]
+    export CMAKE_BUILD_PARALLEL_LEVEL=2  # [unix]
     set "CONDA_PREFIX=%PREFIX:\=/%"  # [win]
     set "CMAKE_BUILD_PARALLEL_LEVEL=%CPU_COUNT%"  # [win]
     {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
