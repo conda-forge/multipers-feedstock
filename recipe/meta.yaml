@@ -1,5 +1,5 @@
 {% set name = "multipers" %}
-{% set version = "2.6.0" %}
+{% set version = "2.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 565d4ea96236aa4a6bed905a7b0fcb8d8e5a5637926aa68d33b9e114116e5711
+  sha256: 06ed980dae94ff2935968d7ea979b6fb80827ef882725886386f1730fee077ac
 
 build:
   script: |
@@ -17,7 +17,7 @@ build:
     set "CONDA_PREFIX=%PREFIX:\=/%"  # [win]
     set "CMAKE_BUILD_PARALLEL_LEVEL=%CPU_COUNT%"  # [win]
     {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
-  number: 1
+  number: 0
   skip: true  # [py<=39]
   missing_dso_whitelist:
     - $RPATH/multipers_core.dll              # [win]
